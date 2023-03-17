@@ -1,0 +1,99 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.projets{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & .projet--flex{
+        width: 90%;
+        @include ordi{
+            width: 50%;
+        }
+        h2 {
+            text-align: center;
+            text-transform: uppercase;
+            background: $secondary;
+            color: $third;
+            margin: nth($margin, 2) 0;
+            padding: nth($padding, 3);
+            border-radius: 10px;
+        }
+        section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            @include tablet {
+                margin: nth($margin, 4) 0;
+            }
+            & .projet {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                gap: 15px;
+                cursor: pointer;
+                @include tablet {
+                    flex-direction: row;
+                }
+                @include ordi{
+                    gap: 30px;
+                }
+                & .image__projet {
+                    display: flex;
+                    justify-content: center;
+                    width: 100%;
+                    @include tablet{
+                        height: 375px;
+                    }
+                    img {
+                        object-fit: cover;
+                        width: 100%;
+                        border-radius: 10px;
+                        @include shadow;
+                    }
+                }
+                & .text__projet {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: center;
+                    width: 100%;
+                    height: 360px;
+                    @include tablet {
+                        height: 375px;
+                        justify-content: center;
+                        gap: 10px;
+                    }
+                    & span {
+                        font-weight: 700;
+                    }
+                    p{
+                        text-align: justify;
+                    }
+                }
+                & button{
+                    @include button;
+                    background: $secondary;
+                    @include shadow;
+                    border-radius: 10px;
+                    font-weight: 700;
+                    transform: scale(.8);
+                    transition: transform 500ms;
+                    @include tablet{
+                        position: relative;
+                    }
+                    &:hover {
+                        transform: scale(1);
+                    }
+
+                    & a{
+                        color: $third;
+                        opacity: .8;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+}

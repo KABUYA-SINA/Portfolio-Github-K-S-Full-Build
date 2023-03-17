@@ -1,0 +1,26 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+
+footer{
+    @include shadow;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: $primary;
+
+    & img{
+        object-fit: cover;
+        width: 34%;
+        @include tablet{
+            width: 25%;
+        }
+        @include ordi{
+            width: 8%;
+        }
+    }
+
+    & p{
+        color: $third;
+    }
+}

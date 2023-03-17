@@ -1,0 +1,69 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+
+.about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+    & .about-mainText{
+        width: 90%;
+        @include ordi{
+            width: 50%;
+        }
+    }
+
+    h2{
+        text-align: center;
+        text-transform: uppercase;
+        margin: nth($margin, 2) 0;
+        padding: nth($padding, 3);
+        border-radius: 10px;
+        background: $secondary;
+        color: $third;
+    }
+    p{
+        text-align: justify;
+        margin: nth($margin, 4)+5 0
+    }
+    & .about_next{
+        width: 90%;
+        @include ordi {
+            width: 50%;
+        }
+    }
+    & .skills{
+        text-align: center;
+        margin: nth($margin, 4) 0;
+        width: 90%;
+        cursor: pointer;
+        @include ordi {
+            width: 50%;
+        }
+        & article {
+            height: 320px;
+
+            & ol {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-evenly;
+                list-style-type: none;
+                height: 100%;
+
+                & .childs {
+                    width: 30%;
+                    padding: nth($padding, 2) 0;
+                    border-radius: 20px;
+                    @include shadow;
+                    background: $third;
+                    @include ordi{
+                        width: 21%;
+                    }
+                }
+            }
+        }
+    }
+}

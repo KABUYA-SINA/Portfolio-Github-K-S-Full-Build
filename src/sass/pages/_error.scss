@@ -1,0 +1,48 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.parent {
+    display: contents;
+}
+
+.content {
+    background: $white-color;
+    margin: 0;
+
+    & main {
+        padding-top: 132px;
+        text-align: center;
+
+        @include tablet {
+            margin-bottom: 20px;
+        }
+
+        & h1 {
+            font-size: 140px;
+            font-weight: 700;
+
+            @include tablet {
+                font-size: 260px;
+            }
+        }
+
+        & p {
+            font-size: 19px;
+            padding: 30px;
+
+            @include tablet {
+                font-size: 36px;
+            }
+        }
+
+        & a {
+            text-decoration: underline #ffd452;
+            font-size: 16px;
+
+            @include tablet {
+                font-size: 18px;
+            }
+        }
+    }
+
+}

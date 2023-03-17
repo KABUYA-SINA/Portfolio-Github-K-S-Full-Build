@@ -1,0 +1,22 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.banner-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: nth($margin, 4) * 2 0;
+    & .banner-text--boxe{
+        flex: .8;
+        @include tablet{
+            text-align: center;
+        }
+        h1{
+            color: $header;
+        }
+        p{
+            margin: nth($margin, 4) 0;
+            font-size: 16px;
+        }
+    }
+}

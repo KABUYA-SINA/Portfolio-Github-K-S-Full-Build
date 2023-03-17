@@ -1,0 +1,24 @@
+@mixin tablet {
+    @media screen and (min-width: map-get($breakpoints, tablet)) {
+        @content;
+    }
+}
+
+@mixin ordi {
+    @media screen and (min-width: map-get($breakpoints, ordi)) {
+        @content;
+    }
+}
+
+@mixin shadow {
+    box-shadow: 0px 5px 10px #999;
+}
+
+@mixin button {
+    cursor: pointer;
+    padding: nth($padding, 2) 15px;
+    text-align: center;
+    display: flex;
+    font-size: 16px;
+    margin: nth($margin, 1) 2px;
+}

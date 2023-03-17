@@ -1,0 +1,13 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.container {
+    margin: 0;
+
+    & .all-body{
+        padding-top: 132px;
+        @include ordi{
+            padding-top: 120px;
+        }
+    }
+}

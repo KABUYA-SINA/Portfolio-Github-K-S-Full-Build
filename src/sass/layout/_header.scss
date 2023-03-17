@@ -1,0 +1,101 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include shadow;
+    background: $primary;
+    width: 100%;
+    height: 132px;
+    z-index: 1000;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    transition: .4s;
+    @include ordi{
+        height: 120px;
+    }
+    &.sticky{
+        padding: nth($padding, 1)-3 5px;
+        background: $secondary;
+        &.sticky nav ul li a, .sina-s, .toggle svg {
+            color: $third !important;
+            font-weight: 700;
+        }
+    }
+    & .top--image{
+        display: flex;
+        align-items: center;
+        flex: 1;
+        & img{
+            width: 32%;
+            object-fit: cover;
+            @include tablet{
+                width: 25%;
+            }
+            @include ordi{
+                width: 13%;
+            }
+        }
+        & .sina-s{
+            margin-left: nth($margin, 4);
+            color: $header;
+        }
+    }
+
+    & .navigation{
+        position: fixed;
+        left: -100%;
+        top: 14%;
+        height: 100%;
+        width: 100%;
+        transition: .4s ;
+        opacity: 1;
+        @include tablet{
+            flex: .5;
+            position: relative;
+            left: 0;
+            top: 0;
+        }
+        @include ordi{
+            flex: .4;
+        }
+        &.active{
+            left: 0;
+            background: $secondary;
+        }
+        ul{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            gap: 50px;
+            height: 100%;
+            transition: .4s;
+
+            @include tablet {
+                flex-direction: row;
+                justify-content: space-evenly;
+                gap: 0;
+            }
+            & li{
+                cursor: pointer;
+            }
+            & .first-child a, .second-child a{
+                color: $header;
+            }
+        }
+    }
+    & .toggle{
+        padding: nth($padding, 2);
+        @include tablet{
+            display: none;
+        }
+        svg{
+            color: $header !important;
+        }
+    }
+}

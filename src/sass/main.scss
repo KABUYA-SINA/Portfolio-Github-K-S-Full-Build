@@ -1,0 +1,17 @@
+@import "./utils/variables";
+@import "./utils/mixins";
+
+@import "./base/base";
+@import "./base/header_typography";
+@import "./base/footer_typography";
+@import "./base/main_page_typography";
+
+@import "./layout/header";
+@import "./layout/container";
+@import "./layout/footer";
+
+@import "./pages/about";
+@import "./pages/error";
+@import "./pages/projets";
+@import "./pages/banner_text";
+@import "./pages//loader";

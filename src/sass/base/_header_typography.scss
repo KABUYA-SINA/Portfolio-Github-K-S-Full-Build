@@ -1,0 +1,16 @@
+@import '../utils/mixins';
+@import '../utils/variables';
+
+header{
+    nav ul li{
+        font-size: 25px;
+        font-weight: 700;
+        text-transform: uppercase;
+        @include tablet{
+            font-size: 16px;
+        }
+    }
+    & .sina-s{
+        font-weight: 700;
+    }
+}
